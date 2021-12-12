@@ -7,8 +7,6 @@ import pandas as pd
 import scipy.stats as ss
 import seaborn
 from pingouin import anova
-import scikit_posthocs as sp
-from statsmodels.stats.multicomp import pairwise_tukeyhsd
 
 
 def task_1():
@@ -29,7 +27,7 @@ def task_1():
     plt.plot(x, p * 45, 'k', linewidth=2)
     plt.show()
 
-    seaborn.histplot(Y_ms, binwidth = 0.75)
+    seaborn.histplot(Y_ms, binwidth=0.75)
     data = np.random.normal(24, 2.4, 100)
     mu, std = ss.norm.fit(data)
     x = np.linspace(17, 31, 100)
